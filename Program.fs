@@ -28,7 +28,7 @@ let configureServices (services: IServiceCollection) =
 let main _ =
     WebHostBuilder()
         .UseKestrel()
-        .Configure(Action<IApplicationBuilder> configureApp)
+        .Configure(configureApp)
         .ConfigureServices(configureServices)
         .Build()
         .Run()
